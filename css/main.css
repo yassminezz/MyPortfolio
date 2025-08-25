@@ -1,0 +1,203 @@
+.home,
+.services,
+.projects {
+    background: black;
+    color: bisque;
+}
+
+.home {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.edu {
+    background-color: rgb(41, 40, 40);
+    padding: 200px 0 100px 15%;
+    color: bisque;
+}
+
+.projects h3,
+.projects h4 {
+    margin-bottom: 50px;
+}
+
+.home img {
+    border-radius: 45%;
+    width: 22%;
+}
+
+.home .texto {
+    width: 60%;
+}
+
+.home .icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.edu img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.ii i {
+    color: #a877e0;
+}
+
+.home .icons i {
+    color: #a877e0;
+    margin: 10px;
+    font-size: x-large;
+    padding: 10px;
+}
+
+.services,
+.projects {
+    padding: 100px 30px 30px;
+}
+
+.cards {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: black;
+    color: bisque;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    transition: .5s ease;
+    box-shadow: 0px 0px 4px wheat;
+}
+
+.ii i {
+    transition: .5s ease;
+}
+
+.card:hover,
+.icons {
+    transform: scale(1.1);
+}
+
+.ii:hover {
+    transform: scale(1.3);
+}
+
+.cards img {
+    width: 50%;
+}
+
+span {
+    color: #a877e0;
+}
+
+/*//////////////////////////////////////*/
+.skills {
+    background-color: black;
+    padding: 40px 0;
+}
+
+.skills h3 {
+    margin-left: 150px;
+    color: bisque;
+}
+
+/* Apply your custom shadow */
+.card.shadow {
+    box-shadow: 0 2px 5px rgba(245, 222, 179, 0.7);
+    border-radius: 10px;
+    background-color: #111;
+    /* darker card for contrast */
+    color: white;
+    /* text color */
+    transition: 0.3s ease;
+}
+
+.card.shadow:hover {
+    box-shadow: 0 10px 25px rgba(245, 222, 179, 0.9);
+}
+
+.tab-header {
+    position: relative;
+    width: 100%;
+    /* always full width of card */
+    min-height: 50px;
+    /* consistent height */
+    line-height: 50px;
+    /* vertically center text */
+    background: #ff7f27;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 6px 6px 0 0;
+    /* smooth corners on top */
+}
+
+/* folded corners */
+.tab-header::before,
+.tab-header::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    border-style: solid;
+}
+
+.tab-header::before {
+    left: 0;
+    border-width: 10px 10px 0 0;
+}
+
+.tab-header::after {
+    right: 0;
+    border-width: 10px 0 0 10px;
+}
+
+/* 🎨 Colors */
+.front {
+    background: #491980;
+}
+
+.front::before,
+.front::after {
+    border-top-color: #2b0e4d;
+}
+
+.back {
+    background: #6a3ce7;
+}
+
+.back::before,
+.back::after {
+    border-top-color: #47289b;
+}
+
+.db {
+    background: rgb(116, 19, 99);
+}
+
+.db::before,
+.db::after {
+    border-top-color: rgb(71, 12, 60);
+}
+
+.vc {
+    background: #0d0f74;
+}
+
+.vc::before,
+.vc::after {
+    border-top-color: #07083d;
+}
