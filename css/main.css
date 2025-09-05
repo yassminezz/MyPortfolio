@@ -1,8 +1,14 @@
+/* Make all text italic */
+body, body * {
+    font-style: italic !important;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 .home,
 .services,
 .projects {
-    background: black;
-    color: bisque;
+    background:rgb(0, 0, 0) ;
+    color:bisque;
 }
 
 .home {
@@ -25,8 +31,9 @@
 }
 
 .home img {
-    border-radius: 45%;
+    border-radius: 50%;
     width: 22%;
+    box-shadow:  3px 0px 15px #a877e0;
 }
 
 .home .texto {
@@ -79,6 +86,9 @@
     height: 400px;
     transition: .5s ease;
     box-shadow: 0px 0px 4px wheat;
+}
+.services .card{
+       height: 200px;
 }
 
 .ii i {
@@ -200,4 +210,107 @@ span {
 .vc::before,
 .vc::after {
     border-top-color: #07083d;
+}
+
+
+
+  /* Preloader full screen */
+  #preloader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 800px;
+    z-index: 9999;
+  }
+
+  /* Container for loops */
+  .loop-container {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    transform-style: preserve-3d;
+    animation: rotateContainer 6s linear infinite;
+  }
+
+  /* Individual loops */
+  .loop {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 6px solid #a877e0;
+    border-radius: 50%;
+    top: 30px;
+    left: 30px;
+    box-shadow: 0 0 20px #a877e0;
+    animation: rotateLoop 3s linear infinite;
+    transform-origin: 50% 50%;
+  }
+
+  .loop1 { transform: rotateX(0deg) rotateY(0deg); animation-delay: 0s; }
+  .loop2 { transform: rotateX(90deg) rotateY(0deg); animation-delay: 0.3s; }
+  .loop3 { transform: rotateX(45deg) rotateY(45deg); animation-delay: 0.6s; }
+  .loop4 { transform: rotateX(135deg) rotateY(45deg); animation-delay: 0.9s; }
+
+  @keyframes rotateContainer {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+  }
+
+  @keyframes rotateLoop {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+  }
+
+  /* Artistic name */
+  .preloader-name {
+    margin-top: 40px;
+    color: #a877e0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 0 0 10px #ff79c6;
+    animation: pulseName 1.5s infinite alternate;
+  }
+
+  @keyframes pulseName {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(1.15); opacity: 1; }
+  }
+
+/*////////////////////////////*/
+ h1, h2, h3, h4, h5, h6, p, a, span, li {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* When element is visible */
+.scroll-show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave-animation 2s infinite;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+.pro,.projs{
+    margin :50px ;
 }
